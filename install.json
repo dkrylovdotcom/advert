@@ -1,0 +1,54 @@
+{
+    "id": 1,
+    "update_id": 1,
+    "name": "Рекламные объявления",
+    "identity": "advert",
+    "version": "1.0",
+    "small_description": "Реклама на сайте в любом формате",
+    "description": "Возможность интеграции с различными API.",
+
+    "migrationsDir": "migrations",
+    "migrations": [
+        "m171216_193632_create_advert_zone_table",
+        "m171216_193641_create_advert_table",
+        "m171216_193646_create_advert_item_table",
+        "m180216_080343_advert_rbac_init"
+    ],
+    "files": [
+        "/"
+    ],
+    "controllers": [
+        {
+            "part": "backend",
+            "name": "AdvertController",
+            "core_name": "AdvertCoreController"
+        },
+        {
+            "part": "backend",
+            "name": "ZoneController",
+            "core_name": "ZoneCoreController"
+        }
+    ],
+    "url_rules": [],
+    "image_thumb": [
+        {
+            "module_id": null,
+            "entity": "modules\\advert\\entities\\AdvertItem",
+            "name": "origin",
+            "width": 640,
+            "height": 640,
+            "default": 0
+        },
+        {
+            "module_id": null,
+            "entity": "modules\\advert\\entities\\AdvertItem",
+            "name": "thumb",
+            "width": 250,
+            "height": 250,
+            "default": 0
+        }
+    ],
+    "template_files": [],
+    "frontendThemeFiles": "/template/frontend/",
+    "backendThemeFiles": "/template/backend/"
+}
